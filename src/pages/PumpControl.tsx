@@ -1,3 +1,4 @@
+import PumpOffControl from '@/components/PumpOffControl';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Settings } from 'lucide-react';
 
@@ -14,23 +15,15 @@ const PumpControl = () => {
           </p>
         </div>
         
-        <Card className="max-w-4xl mx-auto">
+        <Card className="w-full max-w-6xl mx-auto p-4 space-y-4">
           <CardHeader className="text-center">
             <CardTitle className="flex items-center justify-center gap-2">
               <Settings className="h-6 w-6 text-primary" />
               Pump Control System
             </CardTitle>
-            <CardDescription>
-              Próximamente: Panel de control de bombas
-            </CardDescription>
           </CardHeader>
           <CardContent className="text-center py-12">
-            <div className="bg-muted rounded-lg p-8">
-              <Settings className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
-              <p className="text-muted-foreground">
-                Esta sección contendrá controles para monitoreo y gestión de sistemas de bombeo
-              </p>
-            </div>
+            <PumpOffControl />
           </CardContent>
         </Card>
       </div>
