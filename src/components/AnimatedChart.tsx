@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Cell, Tooltip } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Cell, Tooltip, ReferenceLine } from 'recharts';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 interface ChartData {
@@ -115,7 +115,24 @@ const AnimatedChart: React.FC = () => {
                 />
                 <Tooltip content={<CustomTooltip />} />
                 
-                {/* Línea de tensión admisible */}
+                {/* Línea de tensión admisible en el valor 12 */}
+                <ReferenceLine 
+                  y={12} 
+                  stroke="hsl(var(--destructive))" 
+                  strokeDasharray="5 5" 
+                  strokeWidth={2}
+                  label={{ 
+                    value: "Tensión admisible (12 kN/m²)", 
+                    position: "top",
+                    style: { 
+                      fill: 'hsl(var(--destructive))',
+                      fontSize: '12px',
+                      fontWeight: '500'
+                    }
+                  }}
+                />
+                
+                {/* Barras de tensión */}
                 <Bar dataKey="tension" radius={[8, 8, 0, 0]}>
                   {animatedData.map((entry, index) => (
                     <Cell 
@@ -133,15 +150,6 @@ const AnimatedChart: React.FC = () => {
             </ResponsiveContainer>
           </div>
           
-          {/* Línea de referencia */}
-          <div className="relative mt-4">
-            <div className="absolute top-0 left-0 right-0 h-0.5 bg-destructive opacity-80" 
-                 style={{ top: '-280px' }}>
-              <span className="absolute right-0 -top-6 text-sm font-medium text-destructive">
-                Tensión admisible (12 kN/m²)
-              </span>
-            </div>
-          </div>
           
           {/* Porcentajes */}
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-8">
