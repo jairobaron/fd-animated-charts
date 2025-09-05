@@ -1,5 +1,4 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { AlertTriangle } from 'lucide-react';
+import AnomaliesChart from '@/components/AnomaliesChart';
 
 const Anomalies = () => {
   return (
@@ -14,25 +13,7 @@ const Anomalies = () => {
           </p>
         </div>
         
-        <Card className="max-w-4xl mx-auto">
-          <CardHeader className="text-center">
-            <CardTitle className="flex items-center justify-center gap-2">
-              <AlertTriangle className="h-6 w-6 text-destructive" />
-              Anomaly Detection
-            </CardTitle>
-            <CardDescription>
-              Próximamente: Sistema de detección de anomalías
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="text-center py-12">
-            <div className="bg-muted rounded-lg p-8">
-              <AlertTriangle className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
-              <p className="text-muted-foreground">
-                Esta sección contendrá herramientas para detección y análisis de anomalías
-              </p>
-            </div>
-          </CardContent>
-        </Card>
+        <AnomaliesChart />
       </div>
     </div>
   );
