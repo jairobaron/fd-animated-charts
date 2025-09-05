@@ -1,5 +1,4 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { TrendingUp } from 'lucide-react';
+import IPRCurveChart from '@/components/IPRCurveChart';
 
 const IPRCurve = () => {
   return (
@@ -7,32 +6,14 @@ const IPRCurve = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-            IPR Curve
+            Curva IPR
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Curvas de Relación de Productividad (IPR)
+            Análisis de la Relación de Rendimiento de Entrada del Pozo
           </p>
         </div>
         
-        <Card className="max-w-4xl mx-auto">
-          <CardHeader className="text-center">
-            <CardTitle className="flex items-center justify-center gap-2">
-              <TrendingUp className="h-6 w-6 text-primary" />
-              IPR Analysis
-            </CardTitle>
-            <CardDescription>
-              Próximamente: Curvas de relación de productividad
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="text-center py-12">
-            <div className="bg-muted rounded-lg p-8">
-              <TrendingUp className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
-              <p className="text-muted-foreground">
-                Esta sección contendrá análisis de curvas IPR para evaluación de productividad
-              </p>
-            </div>
-          </CardContent>
-        </Card>
+        <IPRCurveChart />
       </div>
     </div>
   );
