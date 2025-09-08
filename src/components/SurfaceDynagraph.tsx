@@ -17,7 +17,7 @@ const SurfaceDynagraph: React.FC = () => {
 
   // Hardcoded surfacePoints based on the provided image
   const surfacePoints = useMemo(() => [
-    { x: 0, y: 9.7 }, { x: 5, y: 9.8 }, { x: 10, y: 10.2 }, { x: 15, y: 10.8 },
+    { x: 0, y: 9.7 }, { x: 3, y: 9.8 }, { x: 5, y: 9.8 }, { x: 10, y: 10.2 }, { x: 15, y: 10.8 },
     { x: 20, y: 11.2 }, { x: 25, y: 11.8 }, { x: 30, y: 11.8 }, { x: 35, y: 11.0 },
     { x: 40, y: 10.5 }, { x: 45, y: 9.8 }, { x: 50, y: 9.5 }, { x: 55, y: 9.8 },
     { x: 60, y: 10.1 }, { x: 65, y: 10.3 }, { x: 70, y: 10.5 }, { x: 75, y: 10.6 },
@@ -30,7 +30,7 @@ const SurfaceDynagraph: React.FC = () => {
     { x: 60, y: 8.1 }, { x: 55, y: 7.6 }, { x: 50, y: 6.8 }, { x: 45, y: 7.2 },
     { x: 40, y: 7.8 }, { x: 35, y: 8.2 }, { x: 30, y: 8.4 }, { x: 25, y: 8.6 },
     { x: 20, y: 8.7 }, { x: 15, y: 8.5 }, { x: 10, y: 8.4 }, { x: 5, y: 8.5 },
-    { x: 0, y: 8.8 }
+    { x: 3, y: 8.8 }, { x: 1, y: 9}, { x: 0, y: 9.7 }
   ], []);
 
   // Scale functions for Surface Dynagraph
