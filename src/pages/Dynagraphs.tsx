@@ -1,3 +1,4 @@
+import SurfaceDynagraph from '@/components/SurfaceDynagraph';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Activity } from 'lucide-react';
 
@@ -20,17 +21,9 @@ const Dynagraphs = () => {
               <Activity className="h-6 w-6 text-primary" />
               Dynagraphs Analysis
             </CardTitle>
-            <CardDescription>
-              Próximamente: Visualización de dinamógrafos en tiempo real
-            </CardDescription>
           </CardHeader>
           <CardContent className="text-center py-12">
-            <div className="bg-muted rounded-lg p-8">
-              <Activity className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
-              <p className="text-muted-foreground">
-                Esta sección contendrá gráficos de dinamógrafos para análisis de comportamiento de bombeo
-              </p>
-            </div>
+            <SurfaceDynagraph/>
           </CardContent>
         </Card>
       </div>
